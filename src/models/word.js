@@ -1,8 +1,8 @@
 var shortid = require('shortid');
 
 module.exports = {
-  identity: 'pizza',
-  connection: 'pizzaDB',
+  identity: 'word',
+  connection: 'wordDB',
   attributes: {
     id: {
       type: 'string',
@@ -16,7 +16,7 @@ module.exports = {
       type : 'string',
       required : true
     },
-    ingredients: {
+    groups: {
       type : 'array',
       required : false
     }

@@ -1,8 +1,8 @@
 var bedwetterOptions = {}
 
 module.exports = [{
-  // return all pizza items
-  path: '/pizza',
+  // return all items
+  path: '/word',
   method: 'GET',
   config: {
       handler: {
@@ -10,8 +10,8 @@ module.exports = [{
       }
   }
 }, {
-  // return a specific pizza by id
-  path: '/pizza/{id}',
+  // return a specific item by id
+  path: '/word/{id}',
   method: 'GET',
   config: {
       handler: {
@@ -19,8 +19,8 @@ module.exports = [{
       }
   }
 }, {
-  // create a new pizza
-  path: '/pizza',
+  // create a new item
+  path: '/word',
   method: 'POST',
   config: {
       handler: {
@@ -28,8 +28,8 @@ module.exports = [{
       }
   }
 }, {
-  // udpate an existing pizza by id
-  path: '/pizza/{id}',
+  // udpate an item by id
+  path: '/word/{id}',
   method: ['PATCH', 'POST'],
   config: {
       handler: {
@@ -37,8 +37,8 @@ module.exports = [{
       }
   }
 }, {
-  // remove a pizza by id
-  path: '/pizza/{id}',
+  // remove an item by id
+  path: '/word/{id}',
   method: 'DELETE',
   config: {
       handler: {

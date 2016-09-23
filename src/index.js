@@ -5,14 +5,14 @@ server.connection({ port: 8080, host: 'localhost' });
 
 var dogwaterOptions = {
   connections: {
-    pizzaDB : {
-      adapter: 'pizzaDisk'
+    wordDB : {
+      adapter: 'wordDisk'
     }
   },
   adapters:{
-     pizzaDisk : 'sails-disk'
+     wordDisk : 'sails-disk'
   },
-  models: [require('./models/pizza')]
+  models: [require('./models/word')]
 };
 
 server.register([{
@@ -27,9 +27,9 @@ server.register([{
 ], function (err) {
     if (err) { return console.log(err); }
 
-    server.route(require('./routes/pizza'));
+    server.route(require('./routes/word'));
 
     server.start(function () {
-      console.log('Pizza API up and running at:', server.info.uri);
+      console.log('Word API up and running at:', server.info.uri);
     });
 });

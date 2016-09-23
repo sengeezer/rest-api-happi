@@ -1,7 +1,7 @@
 var Hapi = require('hapi');
 
 var server = new Hapi.Server();
-server.connection({ port: 1337, host: 'localhost' });
+server.connection({ port: 8080, host: 'localhost' });
 
 var dogwaterOptions = {
   connections: {
@@ -22,7 +22,7 @@ server.register([{
     options: dogwaterOptions
   },{
     register: require('bedwetter'),
-    options: {} 
+    options: {}
   }
 ], function (err) {
     if (err) { return console.log(err); }
@@ -33,4 +33,3 @@ server.register([{
       console.log('Pizza API up and running at:', server.info.uri);
     });
 });
-
